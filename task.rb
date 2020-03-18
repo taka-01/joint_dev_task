@@ -72,7 +72,7 @@ def q7
   # p array.map!{|x| x.to_i}
   # p array.map &:to_i
   
-  p array.map(&:to_i)
+  p array.map!(&:to_i)
 
 end
 
@@ -100,7 +100,19 @@ def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
+  # foods.each do |i|
+  #   if i.include?("うに")
+  #     puts "好物です"
+  #   else
+  #     puts "まぁまぁ好きです"
+  #   end
+  # end
 
+  if foods.include?("うに")
+      puts "好物です"
+    else
+      puts "まぁまぁ好きです"
+    end
 end
 
 def q11
