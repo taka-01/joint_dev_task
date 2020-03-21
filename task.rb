@@ -146,8 +146,10 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-  user_data2 = user_data.merge(update_data)
-  puts user_data2
+  # user_data2 = user_data.merge(update_data)
+  # puts user_data2
+
+  puts user_data.merge(update_data)
 end
 
 def q14
@@ -163,7 +165,17 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-
+  if data1.include?(:age)
+    puts "OK"
+  else
+    puts "NG"
+  end
+  
+  if data2.include?(:age)
+    puts "OK"
+  else
+    puts "NG"
+  end
 end
 
 def q16
@@ -175,7 +187,6 @@ def q16
   ]
 
   # 以下に回答を記載
-
 end
 
 class UserQ17
