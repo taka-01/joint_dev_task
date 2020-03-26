@@ -200,7 +200,23 @@ end
 
 class UserQ17
   # 以下に回答を記載
+  
 
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+    @gender = params[:gender]
+    @admin = params[:admin]
+  end
+
+  def info
+    admin = @admin ? '有り' : '無し'
+    
+    puts "名前:#{@name}"
+    puts "年齢:#{@age}"
+    puts "性別:#{@gender}"
+    puts "管理者権限:#{admin}"
+  end
 end
 
 def q17
