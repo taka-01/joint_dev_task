@@ -212,10 +212,16 @@ class UserQ17
   def info
     admin = @admin ? '有り' : '無し'
     
-    puts "名前:#{@name}"
-    puts "年齢:#{@age}"
-    puts "性別:#{@gender}"
-    puts "管理者権限:#{admin}"
+    # puts "名前:#{@name}"
+    # puts "年齢:#{@age}"
+    # puts "性別:#{@gender}"
+    # puts "管理者権限:#{admin}"
+    puts <<~EOS
+      名前:#{@name}
+      年齢:#{@age}
+      性別:#{@gender}
+      管理者権限:#{admin}
+    EOS
   end
 end
 
