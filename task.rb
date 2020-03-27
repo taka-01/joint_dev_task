@@ -237,7 +237,18 @@ end
 
 class UserQ18
   # 以下に回答を記載
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+  end
 
+  def introduce
+    if @age >= 20
+      "こんにちは、#{@name}と申します。よろしくお願いいたします。"
+    else
+      "はいさいまいど〜、#{@name}です！！！"
+    end
+  end
 end
 
 def q18
