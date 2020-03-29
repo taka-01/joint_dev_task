@@ -262,13 +262,15 @@ end
 
 class Item
   # 以下を修正して下さい
+  attr_reader :name
+  
   def initialize(name:)
     @name = name
   end
 
-  def name
-    @name
-  end
+  # def name
+  #   @name
+  # end
 end
 
 def q19
@@ -279,12 +281,18 @@ end
 
 class UserQ20
   # 以下に回答を記載
-
+  def initialize(**params)
+    @name = params[:users][:name]
+    @age = params[:age]
+  end
 end
 
 class Zoo
   # 以下に回答を記載
-
+  def initialize(**params)
+    @name = params[:zoo][:name]
+    @entry_fee = params[:entry_fee]
+  end
 end
 
 
